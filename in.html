@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+	<title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+
+	<div id="layout">
+    	<!-- Menu toggle -->
+    	<a href="#menu" id="menuLink" class="menu-link">
+        	<!-- Hamburger icon -->
+        	<span></span>
+    	</a>
+
+    	<div id="menu">
+        	<div class="pure-menu">
+            	<a class="pure-menu-heading" href="#">GoodCreed</a>
+				<ul class="pure-menu-list">
+                	<li class="pure-menu-item"><a href="#" class="pure-menu-link">In</a></li>
+                	<li class="pure-menu-item"><a href="#" class="pure-menu-link">Out</a></li>
+					<li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
+                    	<a href="#" class="pure-menu-link">Services</a>
+                	</li>
+					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact Us</a></li>
+            	</ul>
+        	</div>
+    	</div>
+
+    <div id="main">
+        <div class="header">
+            <h2>Mall Traffic Controller</h2>
+		</div>
+		<div class="content">
+           	<div class="pure-g">&nbsp;</div>
+			<div class="pure-g" >
+				<div class="pure-u-1 pure-u-md-1-3" id="status">
+                		<!-- error or success status division -->
+                		&nbsp;
+            	</div>
+			</div>
+			<div class="pure-g">&nbsp;</div>		
+			<div class="pure-form pure-form-stacked">
+    			<fieldset>
+				<div class="pure-g">
+				
+					<div class="pure-u-1-5">
+        				<select  class="pure-u-23-24 pure-input-rounded" >
+                    		<!-- will be changed dynamically -->
+                    		<option>IND +91</option>
+                    		<option>USA +1</option>
+                		</select>
+    				</div>
+    				
+            		<div class="pure-u-4-5">
+                		<input id="mobileNumber" class="pure-u-23-24 pure-input-rounded" type="text" placeholder="Enter Mobile Number" onkeyup="GetVehicleNumbers()" autocomplete="off" required autofocus>
+            		</div>
+					
+            		
+            		<div class="pure-u-1 pure-u-md-1-3">
+                		<label for="state">Vehicle Numbers</label>
+                		<select id="state" onchange="disable()" class="pure-u-23-24 pure-input-rounded" disabled>
+                    		<!-- will be changed dynamically -->
+                    		<option>No Numbers Registered</option>
+                		</select>
+            		</div>
+            		
+            		<div class="pure-u-1 pure-u-md-1-3">
+            			<label for="state">Enter Vehicle Number</label>
+            		</div>
+            		 <div class="pure-u-1-8">
+        				<select class="pure-u-23-24 pure-input-rounded" id="registrationNumberPartOne" disabled>
+                    		<option>AP</option>
+                    		<option>TS</option>
+                    		<option>MH</option>
+                    		<option>TN</option>
+                    		<option>KA</option>
+                    		<option>AN</option>
+							<option>AR</option>
+							<option>AS</option>
+							<option>BR</option>
+							<option>CG</option>
+							<option>CH</option>
+							<option>DD</option>
+							<option>DL</option>
+							<option>DN</option>
+							<option>GA</option>
+							<option>GJ</option>
+							<option>HR</option>
+							<option>HP</option>
+							<option>JH</option>
+							<option>JK</option>
+							<option>KL</option>
+							<option>LD</option>
+							<option>ML</option>
+							<option>MN</option>
+							<option>MP</option>
+							<option>MZ</option>
+							<option>NL</option>
+							<option>OD</option>
+							<option>PB</option>
+							<option>PY</option>
+							<option>RJ</option>
+							<option>SK</option>
+							<option>TN</option>
+							<option>TR</option>
+							<option>UK</option>
+							<option>UP</option>
+							<option>WB</option>
+                    		
+                    		
+                		</select>
+    				</div>
+    				<div class="pure-u-1-8">
+        				<input class="pure-input-1 pure-input-rounded" type="text" id="registrationNumberPartTwo" placeholder="XX" disabled>
+    				</div>
+    				<div class="pure-u-1-8">
+        				<input type="text" id="registrationNumberPartThree" class="pure-input-1 pure-input-rounded" placeholder="XX" disabled>
+					</div>
+    				<div class="pure-u-1-4">
+        				<input class="pure-input-1 pure-input-rounded" id="registrationNumberPartFour" type="text" placeholder="XXXX" disabled>
+    				</div>
+        		</div>
+
+				<div class="pure-u-1 pure-u-md-1-3">&nbsp;</div>
+				<div class="pure-u-1 pure-u-md-1-3">
+               		<button type="submit" class="pure-u-23-24 pure-button button-success" id="submitButton" onclick="In()">Submit</button>
+       			</div>
+				</fieldset>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/ui.js"></script>
+<script src="js/in.js"></script>
+
+
+</body>
+</html>

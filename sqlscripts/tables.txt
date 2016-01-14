@@ -1,0 +1,38 @@
+create table usr_reg_tbl
+(
+	id int not null auto_increment,
+	phone_number varchar(100),
+	registration_numbers varchar(1000),
+	registration_count int,
+	primary key(id)
+);
+
+create table login_tbl
+(
+	id int not null auto_increment,
+	phone_number varchar(100),
+	password varchar(1000),
+	code varchar(10),
+	mall_name varchar(100),
+	role varchar(10),
+	primary key(id),
+	unique (phone_number)
+);
+
+insert into usr_reg_tbl(phone_number,registration_numbers,registration_count) values('9553304094','AP28CG7269,AP28CG5830,AP29GF6534',3);
+
+create table transaction_tbl
+(
+	id int not null auto_increment,
+	ticket_number varchar(20),
+	phone_number varchar(20),
+	registration_number varchar(20),
+	in_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	out_time TIMESTAMP,
+	unique (ticket_number),
+	primary key(id)
+);
+
+insert into login_tbl(phone_number,password,code,mall_name,role) values('9553304094','admin','AA','INORBIT MALL','in');
+insert into login_tbl(phone_number,password,code,mall_name,role) values('9553304095','admin','','INORBIT MALL','out');
+insert into login_tbl(phone_number,password,code,mall_name,role) values('9553304096','admin','','INORBIT MALL','manager');
